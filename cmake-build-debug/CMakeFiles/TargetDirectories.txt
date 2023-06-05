@@ -1,0 +1,3 @@
+/Users/kamiladossymbek/CLionProjects/git_hw/cmake-build-debug/CMakeFiles/git_hw.dir
+/Users/kamiladossymbek/CLionProjects/git_hw/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kamiladossymbek/CLionProjects/git_hw/cmake-build-debug/CMakeFiles/rebuild_cache.dir
