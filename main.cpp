@@ -1,10 +1,19 @@
 #include <iostream>
 using namespace std;
-
-int FibonacciRecursive(int n) {
+int fibonacciNonRecursive(int n) {
     if (n <= 1)
         return n;
-    return FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
+
+    int previous = 0;
+    int current = 1;
+
+    for (int i = 2; i <= n; i++) {
+        int temp = current;
+        current += previous;
+        previous = temp;
+    }
+
+    return current;
 }
 
 int main() {
@@ -12,9 +21,10 @@ int main() {
     cout << "Enter the value of n: ";
     cin >> n;
 
-    int result = FibonacciRecursive(n);
+    int result = fibonacciNonRecursive(n);
 
     cout << "The " << n << "th Fibonacci number is: " << result << std::endl;
+
     return 0;
 }
 
