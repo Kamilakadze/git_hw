@@ -1,19 +1,15 @@
 #include <iostream>
 using namespace std;
-int fibonacciNonRecursive(int n) {
-    if (n <= 1)
-        return n;
-
-    int previous = 0;
-    int current = 1;
+int fibonacciArray(int n) {
+    int fibArray[n + 1];
+    fibArray[0] = 0;
+    fibArray[1] = 1;
 
     for (int i = 2; i <= n; i++) {
-        int temp = current;
-        current += previous;
-        previous = temp;
+        fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
     }
 
-    return current;
+    return fibArray[n];
 }
 
 int main() {
@@ -21,7 +17,7 @@ int main() {
     cout << "Enter the value of n: ";
     cin >> n;
 
-    int result = fibonacciNonRecursive(n);
+    int result = fibonacciArray(n);
 
     cout << "The " << n << "th Fibonacci number is: " << result << std::endl;
 
