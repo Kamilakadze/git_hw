@@ -15,7 +15,6 @@ int main() {
     int result = FibonacciRecursive(n);
 
     cout << "The " << n << "th Fibonacci number is: " << result << std::endl;
-
     return 0;
 }
 
